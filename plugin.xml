@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="talkingdata-sdk" 
+        version="5.0.0">
+    
+    <name>TalkingData-SDK</name>
+    
+    <js-module src="www/TalkingDataSDK.js" name="TalkingDataSDK">
+        <clobbers target="TalkingDataSDK" />
+    </js-module>
+    <js-module src="www/TalkingDataProfileType.js" name="TalkingDataProfileType">
+        <clobbers target="TalkingDataProfileType" />
+    </js-module>
+    <js-module src="www/TalkingDataGender.js" name="TalkingDataGender">
+        <clobbers target="TalkingDataGender" />
+    </js-module>
+    <js-module src="www/TalkingDataProfile.js" name="TalkingDataProfile">
+        <clobbers target="TalkingDataProfile" />
+    </js-module>
+    <js-module src="www/TalkingDataSearch.js" name="TalkingDataSearch">
+        <clobbers target="TalkingDataSearch" />
+    </js-module>
+    <js-module src="www/TalkingDataShoppingCart.js" name="TalkingDataShoppingCart">
+        <clobbers target="TalkingDataShoppingCart" />
+    </js-module>
+    <js-module src="www/TalkingDataOrder.js" name="TalkingDataOrder">
+        <clobbers target="TalkingDataOrder" />
+    </js-module>
+    <js-module src="www/TalkingDataTransaction.js" name="TalkingDataTransaction">
+        <clobbers target="TalkingDataTransaction" />
+    </js-module>
+    
+    <platform name="android">
+        <source-file src="src/android/TalkingDataSDKPlugin.java" target-dir="src/com/talkingdata/sdk" />
+        <source-file src="src/android/TalkingDataSDK.jar" target-dir="libs" />
+        
+        <config-file target="res/xml/config.xml" parent="/widget/plugins">
+            <feature name="TalkingDataSDK">
+                <param name="android-package" value="com.talkingdata.sdk.TalkingDataSDKPlugin"/>
+            </feature>
+        </config-file>
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.GET_TASKS" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+    
+    <platform name="ios">
+        <header-file src="src/ios/TalkingDataSDKPlugin.h" />
+        <source-file src="src/ios/TalkingDataSDKPlugin.m" />
+        <header-file src="src/ios/TalkingDataSDK.h" />
+        <source-file src="src/ios/libTalkingDataSDK.a" framework="true" />
+        
+        <config-file target="config.xml" parent="/widget/plugins">
+            <feature name="TalkingDataSDK">
+                <param name="ios-package" value="TalkingDataSDKPlugin"/>
+            </feature>
+        </config-file>
+        
+        <framework src="AdServices.framework" />
+        <framework src="iAd.framework" />
+        <framework src="StoreKit.framework" />
+        <framework src="AppTrackingTransparency.framework" />
+        <framework src="AdSupport.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="Security.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="libc++.tbd" />
+        <framework src="libz.tbd" />
+    </platform>
+</plugin>

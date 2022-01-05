@@ -1,0 +1,22 @@
+{
+  "name": "talkingdata-sdk",
+  "version": "5.0.0",
+  "description": "TalkingData SDK cordova plugin.",
+  "main": "TalkingDataSDK.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TalkingData/TalkingData_SDK_Cordova.git"
+  },
+  "keywords": [
+    "TalkingData"
+  ],
+  "author": "TalkingData",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TalkingData/TalkingData_SDK_Cordova/issues"
+  },
+  "homepage": "https://github.com/TalkingData/TalkingData_SDK_Cordova#readme"
+}
