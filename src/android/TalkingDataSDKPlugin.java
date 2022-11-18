@@ -367,10 +367,9 @@ public class TalkingDataSDKPlugin extends CordovaPlugin {
     @SuppressWarnings("unused")
     private void onEvent(final JSONArray arguments) throws JSONException {
         String eventId = arguments.getString(0);
-        double eventValue = arguments.getDouble(1);
-        String eventDataJson = arguments.getString(2);
+        String eventDataJson = arguments.getString(1);
         Map<String, Object> eventData = mapFromJsonString(eventDataJson);
-        TalkingDataSDK.onEvent(ctx, eventId, eventValue, eventData);
+        TalkingDataSDK.onEvent(ctx, eventId, eventData);
     }
     
     @SuppressWarnings("unused")

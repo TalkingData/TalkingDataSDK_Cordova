@@ -398,11 +398,10 @@ var TalkingDataSDK = {
     /**
      * 触发自定义事件
      * @param {string}  eventId         : 自定义事件的ID
-     * @param {number}  eventValue      : 自定义事件的数值
      * @param {object}  eventData       : 自定义事件的数据，Json格式
      */
-    onEvent: function(eventId, eventValue, eventData) {
-        exec(null, null, "TalkingDataSDK", "onEvent", [eventId, eventValue, eventData]);
+    onEvent: function(eventId, eventData) {
+        exec(null, null, "TalkingDataSDK", "onEvent", [eventId, eventData]);
     },
     
     /**
