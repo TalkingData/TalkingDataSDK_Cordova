@@ -12,11 +12,13 @@
 
 @interface TalkingDataSDKPlugin : CDVPlugin
 
-- (void)init:(CDVInvokedUrlCommand *)command;
+- (void)initSDK:(CDVInvokedUrlCommand *)command;
+- (void)startA:(CDVInvokedUrlCommand *)command;
 - (void)backgroundSessionEnabled:(CDVInvokedUrlCommand *)command;
 - (void)getDeviceId:(CDVInvokedUrlCommand *)command;
 - (void)getOAID:(CDVInvokedUrlCommand *)command;
 - (void)setVerboseLogDisable:(CDVInvokedUrlCommand *)command;
+- (void)setConfig:(CDVInvokedUrlCommand *)command;
 - (void)setLocation:(CDVInvokedUrlCommand *)command;
 - (void)onPage:(CDVInvokedUrlCommand *)command;
 - (void)onPageBegin:(CDVInvokedUrlCommand *)command;

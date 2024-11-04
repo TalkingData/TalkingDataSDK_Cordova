@@ -1,6 +1,6 @@
 {
   "name": "talkingdata-sdk",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "TalkingData SDK cordova plugin.",
   "main": "TalkingDataSDK.js",
   "scripts": {
